@@ -1,8 +1,19 @@
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Ruby on Rails  | <%= @title %></title>
+<title><%= title %></title>
+<%= stylesheet_link_tag 'styl', media: "all"%>
 </head>
 <body>
+<ul class="navigation round">
+<li><%= link_to "Home", '#' %></li>
+<li><%= link_to "Help", '#' %></li>
+<li><%= link_to "Sign in", '#' %></li>
+</ul>
+<div class="container">
+ 
+<div id="content" class="round">
 <%= yield %>
+</div>
+</div>
 </body>
 </html>
